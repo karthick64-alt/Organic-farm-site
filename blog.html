@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Blog - Organic Farm</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Organic Farm</a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="practices.html">Practices</a>
+                <a href="shop.html">Shop</a>
+                <a href="visits.html">Farm Visits</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </div>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 300px; padding: 3rem 0;">
+        <div class="container">
+            <h1 class="section-title">Farm Journal & Blog</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Stories from the farm, organic living tips, recipes, and sustainability insights
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+                <button class="btn btn-primary" onclick="filterBlog('all')">All Posts</button>
+                <button class="btn btn-outline" onclick="filterBlog('tips')">Living Tips</button>
+                <button class="btn btn-outline" onclick="filterBlog('stories')">Farm Stories</button>
+                <button class="btn btn-outline" onclick="filterBlog('recipes')">Recipes</button>
+                <button class="btn btn-outline" onclick="filterBlog('sustainability')">Sustainability</button>
+            </div>
+
+            <div class="blog-grid" id="blog-container">
+                <div class="blog-card" data-category="stories">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400&q=80" alt="Harvest Season" class="blog-image">
+                    <div class="blog-content">
+                        <p class="blog-date"><i class="fas fa-calendar"></i> October 15, 2024</p>
+                        <h3 class="product-name">The 2024 Harvest Season: A Record Year</h3>
+                        <p class="product-description">This year's harvest has been exceptional. Learn about our best practices that led to record yields while maintaining our organic standards...</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="recipes">
+                    <img src="https://images.unsplash.com/photo-1584270354949-c26b0d5b4a0c?w=400&q=80" alt="Recipe" class="blog-image">
+                    <div class="blog-content">
+                        <p class="blog-date"><i class="fas fa-calendar"></i> October 10, 2024</p>
+                        <h3 class="product-name">5 Delicious Ways to Use Your Fall Carrots</h3>
+                        <p class="product-description">From roasted carrot soup to carrot cake, discover five mouth-watering recipes that showcase the sweet flavor of fresh organic carrots...</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="tips">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&q=80" alt="Tips" class="blog-image">
+                    <div class="blog-content">
+                        <p class="blog-date"><i class="fas fa-calendar"></i> October 5, 2024</p>
+                        <h3 class="product-name">How to Store Organic Produce for Maximum Freshness</h3>
+                        <p class="product-description">Learn the best practices for storing your organic fruits and vegetables to maintain their freshness and nutritional value longer...</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="sustainability">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80" alt="Sustainability" class="blog-image">
+                    <div class="blog-content">
+                        <p class="blog-date"><i class="fas fa-calendar"></i> September 28, 2024</p>
+                        <h3 class="product-name">Our Water Conservation Success Story</h3>
+                        <p class="product-description">Discover how we reduced our water usage by 40% while increasing crop yields through innovative irrigation and soil management techniques...</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="stories">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400&q=80" alt="Farm Life" class="blog-image">
+                    <div class="blog-content">
+                        <p class="blog-date"><i class="fas fa-calendar"></i> September 20, 2024</p>
+                        <h3 class="product-name">A Day in the Life: Following Our Farmers</h3>
+                        <p class="product-description">Get an insider's look at a typical day on our organic farm, from sunrise harvest to evening field preparation...</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+
+                <div class="blog-card" data-category="recipes">
+                    <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&q=80" alt="Tomato Recipe" class="blog-image">
+                    <div class="blog-content">
+                        <p class="blog-date"><i class="fas fa-calendar"></i> September 15, 2024</p>
+                        <h3 class="product-name">Tomato Season: 3 Fresh Recipes You'll Love</h3>
+                        <p class="product-description">Celebrate peak tomato season with these three simple, delicious recipes that let the natural flavor shine...</p>
+                        <a href="#" class="btn btn-outline" style="margin-top: 1rem;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Organic Farm</h3>
+                    <p>Stories and tips from the farm.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Subscribe</h3>
+                    <p>Get our latest blog posts delivered to your inbox.</p>
+                    <form onsubmit="subscribeBlog(event)" style="margin-top: 1rem;">
+                        <input type="email" placeholder="Your email" required style="padding: 10px; width: 100%; margin-bottom: 0.5rem; border-radius: 5px; border: 1px solid var(--color-beige-dark);">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3 style="margin: 0; color: white;">Shopping Cart</h3>
+            <button class="close-cart" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
+
+    <script>
+        function filterBlog(category) {
+            const posts = document.querySelectorAll('.blog-card');
+            const buttons = document.querySelectorAll('.btn-outline, .btn-primary');
+            
+            buttons.forEach(btn => {
+                if (btn.textContent.includes('All')) {
+                    if (category === 'all') btn.className = 'btn btn-primary';
+                    else btn.className = 'btn btn-outline';
+                } else {
+                    btn.className = 'btn btn-outline';
+                }
+            });
+            
+            if (category === 'all') {
+                event.target.className = 'btn btn-primary';
+            } else {
+                event.target.className = 'btn btn-primary';
+            }
+            
+            posts.forEach(post => {
+                if (category === 'all' || post.dataset.category === category) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        function subscribeBlog(event) {
+            event.preventDefault();
+            alert('Thank you for subscribing! You will receive our latest blog posts via email.');
+            event.target.reset();
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

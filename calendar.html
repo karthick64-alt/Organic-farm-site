@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seasonal Calendar - Organic Farm</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Organic Farm</a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="practices.html">Practices</a>
+                <a href="shop.html">Shop</a>
+                <a href="visits.html">Farm Visits</a>
+                <a href="calendar.html" class="active">Calendar</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </div>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 300px; padding: 3rem 0;">
+        <div class="container">
+            <h1 class="section-title">Seasonal Calendar</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                See what's in season and plan your orders accordingly
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="calendar-grid">
+                <div class="calendar-month">
+                    <h4>January - March</h4>
+                    <p style="font-weight: 600; color: var(--color-green-primary); margin-bottom: 1rem;">Winter Harvest</p>
+                    <ul class="crop-list">
+                        <li>Kale</li>
+                        <li>Spinach</li>
+                        <li>Carrots</li>
+                        <li>Winter Squash</li>
+                        <li>Brussels Sprouts</li>
+                        <li>Cabbage</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-light);">
+                        Perfect time for hearty winter vegetables and greenhouse-grown greens.
+                    </p>
+                </div>
+
+                <div class="calendar-month">
+                    <h4>April - June</h4>
+                    <p style="font-weight: 600; color: var(--color-green-primary); margin-bottom: 1rem;">Spring Harvest</p>
+                    <ul class="crop-list">
+                        <li>Lettuce</li>
+                        <li>Radishes</li>
+                        <li>Peas</li>
+                        <li>Strawberries</li>
+                        <li>Asparagus</li>
+                        <li>Herbs</li>
+                        <li>Spring Onions</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-light);">
+                        Fresh spring greens and the first berries of the season.
+                    </p>
+                </div>
+
+                <div class="calendar-month">
+                    <h4>July - September</h4>
+                    <p style="font-weight: 600; color: var(--color-green-primary); margin-bottom: 1rem;">Summer Harvest</p>
+                    <ul class="crop-list">
+                        <li>Tomatoes</li>
+                        <li>Corn</li>
+                        <li>Bell Peppers</li>
+                        <li>Zucchini</li>
+                        <li>Cucumbers</li>
+                        <li>Blueberries</li>
+                        <li>Peaches</li>
+                        <li>Beans</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-light);">
+                        Peak season for tomatoes, corn, and summer fruits.
+                    </p>
+                </div>
+
+                <div class="calendar-month">
+                    <h4>October - December</h4>
+                    <p style="font-weight: 600; color: var(--color-green-primary); margin-bottom: 1rem;">Fall Harvest</p>
+                    <ul class="crop-list">
+                        <li>Pumpkins</li>
+                        <li>Apples</li>
+                        <li>Sweet Potatoes</li>
+                        <li>Broccoli</li>
+                        <li>Cauliflower</li>
+                        <li>Root Vegetables</li>
+                        <li>Cranberries</li>
+                    </ul>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-light);">
+                        Perfect for autumn recipes and holiday cooking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-beige-primary);">
+        <div class="container">
+            <h2 class="section-title">Pre-Order Produce</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+                Want to ensure you get your favorite seasonal produce? Pre-order now and we'll harvest it fresh for you when it's in season.
+            </p>
+            <div style="max-width: 600px; margin: 0 auto; background-color: white; padding: 3rem; border-radius: 10px;">
+                <form onsubmit="handlePreOrder(event)">
+                    <div class="form-group">
+                        <label>Product *</label>
+                        <select required>
+                            <option value="">Select produce</option>
+                            <option value="tomatoes">Tomatoes (July-Sept)</option>
+                            <option value="strawberries">Strawberries (April-June)</option>
+                            <option value="pumpkins">Pumpkins (Oct-Nov)</option>
+                            <option value="corn">Sweet Corn (July-Aug)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity *</label>
+                        <input type="number" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Pre-Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Seasonal Recommendations</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&q=80" alt="Current Season" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Currently in Season</h3>
+                        <p class="product-description">Check out what's fresh this month and order now for the best flavor and nutrition.</p>
+                        <a href="products.html" class="btn btn-primary">View Seasonal Produce</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1604977049384-b89c08cd51a8?w=400&q=80" alt="Coming Soon" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Coming Soon</h3>
+                        <p class="product-description">Pre-order next season's favorites to ensure you don't miss out.</p>
+                        <button class="btn btn-outline" onclick="document.querySelector('select').focus()">Pre-Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Organic Farm</h3>
+                    <p>Seasonal produce year-round.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3 style="margin: 0; color: white;">Shopping Cart</h3>
+            <button class="close-cart" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
+
+    <script>
+        function handlePreOrder(event) {
+            event.preventDefault();
+            alert('Thank you for your pre-order! We will contact you when your produce is ready for harvest.');
+            event.target.reset();
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Organic Farm</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Organic Farm</a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="practices.html">Practices</a>
+                <a href="shop.html">Shop</a>
+                <a href="visits.html">Farm Visits</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </div>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 300px; padding: 3rem 0;">
+        <div class="container">
+            <h1 class="section-title">Our Organic Products</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Fresh, nutritious, and 100% organic produce grown with care
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem;">
+                <button class="btn btn-primary" onclick="filterProducts('all')">All Products</button>
+                <button class="btn btn-outline" onclick="filterProducts('vegetables')">Vegetables</button>
+                <button class="btn btn-outline" onclick="filterProducts('fruits')">Fruits</button>
+                <button class="btn btn-outline" onclick="filterProducts('grains')">Grains</button>
+                <button class="btn btn-outline" onclick="filterProducts('dairy')">Dairy</button>
+            </div>
+
+            <div id="products-container" class="products-grid">
+                <!-- Vegetables -->
+                <div class="product-card" data-category="vegetables">
+                    <img src="https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=400&q=80" alt="Organic Tomatoes" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Tomatoes</h3>
+                        <p class="product-price">$4.99/lb</p>
+                        <p class="product-description">Fresh, juicy tomatoes rich in lycopene. Harvested at peak ripeness.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Oct 15, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="1">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables">
+                    <img src="https://images.unsplash.com/photo-1584270354949-c26b0d5b4a0c?w=400&q=80" alt="Organic Carrots" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Carrots</h3>
+                        <p class="product-price">$3.49/lb</p>
+                        <p class="product-description">Sweet, crisp carrots packed with beta-carotene and vitamins.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Oct 12, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="2">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables">
+                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&q=80" alt="Organic Lettuce" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Lettuce</h3>
+                        <p class="product-price">$2.99/bunch</p>
+                        <p class="product-description">Crisp, fresh lettuce perfect for salads and wraps.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Oct 14, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="3">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="vegetables">
+                    <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80" alt="Organic Bell Peppers" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Bell Peppers</h3>
+                        <p class="product-price">$5.99/lb</p>
+                        <p class="product-description">Colorful peppers rich in vitamin C. Available in red, yellow, and green.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Oct 13, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="7">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Fruits -->
+                <div class="product-card" data-category="fruits">
+                    <img src="https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=400&q=80" alt="Organic Strawberries" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Strawberries</h3>
+                        <p class="product-price">$6.99/lb</p>
+                        <p class="product-description">Sweet, red strawberries picked at peak ripeness. High in vitamin C.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Oct 16, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="4">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fruits">
+                    <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400&q=80" alt="Organic Apples" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Apples</h3>
+                        <p class="product-price">$4.49/lb</p>
+                        <p class="product-description">Crisp, sweet apples. Available in multiple varieties including Fuji and Gala.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Oct 10, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="8">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="fruits">
+                    <img src="https://images.unsplash.com/photo-1604977049384-b89c08cd51a8?w=400&q=80" alt="Organic Blueberries" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Blueberries</h3>
+                        <p class="product-price">$8.99/lb</p>
+                        <p class="product-description">Antioxidant-rich blueberries perfect for breakfast or snacking.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Oct 11, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="9">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Grains -->
+                <div class="product-card" data-category="grains">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80" alt="Organic Quinoa" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Quinoa</h3>
+                        <p class="product-price">$12.99/lb</p>
+                        <p class="product-description">Protein-rich quinoa, perfect for salads and side dishes.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Sep 28, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="10">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="grains">
+                    <img src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?w=400&q=80" alt="Organic Oats" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Rolled Oats</h3>
+                        <p class="product-price">$6.99/lb</p>
+                        <p class="product-description">Whole grain oats perfect for a healthy breakfast.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Harvested: Sep 25, 2024
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="11">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Dairy -->
+                <div class="product-card" data-category="dairy">
+                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?w=400&q=80" alt="Organic Milk" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Whole Milk</h3>
+                        <p class="product-price">$5.99/half gallon</p>
+                        <p class="product-description">Fresh, creamy milk from grass-fed, organic-certified cows.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Fresh daily
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="12">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="dairy">
+                    <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&q=80" alt="Organic Cheese" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Organic Cheddar Cheese</h3>
+                        <p class="product-price">$8.99/lb</p>
+                        <p class="product-description">Aged cheddar cheese made from organic milk. Rich and flavorful.</p>
+                        <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            <i class="fas fa-calendar"></i> Aged 6 months
+                        </p>
+                        <p style="font-size: 0.9rem; color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </p>
+                        <button class="btn btn-primary add-to-cart-btn" data-product-id="13">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Organic Farm</h3>
+                    <p>Fresh, organic produce delivered to your door.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="products.html">Products</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3 style="margin: 0; color: white;">Shopping Cart</h3>
+            <button class="close-cart" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
+
+    <script>
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.btn-outline, .btn-primary');
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.className = 'btn btn-outline';
+            });
+            event.target.className = 'btn btn-primary';
+            
+            // Filter products
+            products.forEach(product => {
+                if (category === 'all' || product.dataset.category === category) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

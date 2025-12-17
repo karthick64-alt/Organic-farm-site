@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Organic Farm</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Organic Farm</a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="practices.html">Practices</a>
+                <a href="shop.html">Shop</a>
+                <a href="visits.html">Farm Visits</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </div>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 300px; padding: 3rem 0;">
+        <div class="container">
+            <h1 class="section-title">Frequently Asked Questions</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Find answers to common questions about our products, practices, and services
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width: 900px;">
+            <div style="margin-bottom: 2rem;">
+                <h2 style="color: var(--color-green-primary); margin-bottom: 2rem;">Organic vs Natural</h2>
+                
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        What's the difference between organic and natural?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Organic products are certified by the USDA and must meet strict standards including no synthetic pesticides, fertilizers, or GMOs. "Natural" is not a regulated term and doesn't guarantee the same standards. Our products are USDA Organic certified.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        Are your products really 100% organic?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Yes! All our produce is USDA Organic certified. We undergo regular inspections and maintain detailed records of our farming practices to ensure compliance with organic standards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h2 style="color: var(--color-green-primary); margin-bottom: 2rem;">Storage & Freshness</h2>
+                
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        How long will my produce stay fresh?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Our produce is harvested at peak ripeness and delivered fresh. When stored properly (refrigerated for most items), vegetables typically last 5-7 days, while fruits vary by type. Check our blog for specific storage tips for each product.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        What's the best way to store organic produce?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Most vegetables should be stored in the refrigerator in breathable bags. Leafy greens prefer higher humidity. Some items like tomatoes and potatoes should be stored at room temperature. We include storage tips with every order, and you can find detailed guides on our blog.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h2 style="color: var(--color-green-primary); margin-bottom: 2rem;">Delivery</h2>
+                
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        What areas do you deliver to?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>We currently deliver within a 30-mile radius of our farm. This includes most of the surrounding cities and towns. Enter your zip code during checkout to confirm delivery availability, or contact us for more information.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        How much does delivery cost?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Delivery is free on orders over $50. Orders under $50 have a $7.99 delivery fee. We deliver Tuesday through Saturday, and orders placed before 2 PM are delivered the next business day.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        Can I pick up my order from the farm?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Yes! You can select farm pick-up during checkout at no additional charge. Our farm stand is open daily from 9 AM to 5 PM. Just let us know your preferred pickup time when placing your order.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h2 style="color: var(--color-green-primary); margin-bottom: 2rem;">Subscriptions</h2>
+                
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        Can I customize my subscription box?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Yes! While our boxes are curated with seasonal favorites, you can add preferences and dietary restrictions in your account settings. We'll do our best to accommodate your preferences while maintaining the seasonal variety.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        Can I cancel or pause my subscription?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Absolutely! You can cancel or pause your subscription at any time through your account or by contacting us. There are no cancellation fees, and you can resume whenever you're ready.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" style="margin-bottom: 1rem; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h3 style="color: var(--color-brown-dark); margin-bottom: 0.5rem;">
+                        <i class="fas fa-chevron-down" style="float: right; transition: transform 0.3s;"></i>
+                        What's included in the subscription boxes?
+                    </h3>
+                    <div class="faq-answer" style="display: none; margin-top: 1rem;">
+                        <p>Weekly boxes include 8-10 items, while monthly boxes include 12-15 items. All boxes feature seasonal produce selected at peak ripeness. Monthly boxes also include recipe cards and storage tips. The contents vary based on what's in season.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-beige-primary);">
+        <div class="container">
+            <h2 class="section-title">Still Have Questions?</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                Can't find what you're looking for? We're here to help!
+            </p>
+            <div style="text-align: center;">
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Organic Farm</h3>
+                    <p>We're here to help answer your questions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="contact.html">Contact</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3 style="margin: 0; color: white;">Shopping Cart</h3>
+            <button class="close-cart" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.querySelector('.faq-answer');
+            const icon = element.querySelector('.fas');
+            const isOpen = answer.style.display === 'block';
+            
+            answer.style.display = isOpen ? 'none' : 'block';
+            icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

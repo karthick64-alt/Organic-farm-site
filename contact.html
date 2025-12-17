@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Organic Farm</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Organic Farm</a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="practices.html">Practices</a>
+                <a href="shop.html">Shop</a>
+                <a href="visits.html">Farm Visits</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </div>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 300px; padding: 3rem 0;">
+        <div class="container">
+            <h1 class="section-title">Contact Us</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                We'd love to hear from you! Get in touch with questions, orders, or to schedule a visit
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                <div>
+                    <h2>Send Us a Message</h2>
+                    <form onsubmit="handleFormSubmit(event, 'inquiry')">
+                        <div class="form-group">
+                            <label>Name *</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject *</label>
+                            <select required>
+                                <option value="">Select a subject</option>
+                                <option value="order">Order Inquiry</option>
+                                <option value="visit">Farm Visit</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+
+                <div>
+                    <h2>Get in Touch</h2>
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-map-marker-alt"></i> Address
+                        </h3>
+                        <p>123 Farm Road<br>Countryside, ST 12345<br>United States</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-phone"></i> Phone
+                        </h3>
+                        <p>Main: (555) 123-4567<br>Orders: (555) 123-ORDER<br>WhatsApp: (555) 123-4567</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-envelope"></i> Email
+                        </h3>
+                        <p>General: info@organicfarm.com<br>Orders: orders@organicfarm.com<br>Visits: visits@organicfarm.com</p>
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-clock"></i> Business Hours
+                        </h3>
+                        <p>
+                            Monday - Friday: 8:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 5:00 PM<br>
+                            Sunday: Closed<br>
+                            Farm Stand: Daily 9:00 AM - 5:00 PM
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 style="color: var(--color-green-primary); margin-bottom: 1rem;">
+                            <i class="fas fa-share-alt"></i> Follow Us
+                        </h3>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="#" style="font-size: 2rem; color: var(--color-green-primary);"><i class="fab fa-facebook"></i></a>
+                            <a href="#" style="font-size: 2rem; color: var(--color-green-primary);"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="font-size: 2rem; color: var(--color-green-primary);"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-beige-primary);">
+        <div class="container">
+            <h2 class="section-title">Find Us on the Map</h2>
+            <div style="width: 100%; height: 400px; background-color: #e0e0e0; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-md);">
+                <div style="text-align: center;">
+                    <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: var(--color-green-primary); margin-bottom: 1rem;"></i>
+                    <p style="font-size: 1.2rem;">Interactive map integration available</p>
+                    <p style="color: var(--color-text-light);">123 Farm Road, Countryside, ST 12345</p>
+                </div>
+                <!-- Google Maps iframe would go here: -->
+                <!-- <iframe src="..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Organic Farm</h3>
+                    <p>We're here to help! Contact us anytime.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="faq.html">FAQ</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="visits.html">Farm Visits</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3 style="margin: 0; color: white;">Shopping Cart</h3>
+            <button class="close-cart" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
+
+    <script>
+        function handleFormSubmit(event, formType) {
+            event.preventDefault();
+            alert(`Thank you! Your ${formType} has been submitted. We'll get back to you within 24 hours.`);
+            event.target.reset();
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

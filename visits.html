@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Visits & Experiences - Organic Farm</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌿 Organic Farm</a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="practices.html">Practices</a>
+                <a href="shop.html">Shop</a>
+                <a href="visits.html" class="active">Farm Visits</a>
+                <a href="calendar.html">Calendar</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+                    <span class="cart-badge" style="display: none;">0</span>
+                </div>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 400px; padding: 4rem 0;">
+        <div class="container">
+            <h1 class="section-title">Farm Visits & Experiences</h1>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+                Experience the farm firsthand with guided tours, workshops, and educational programs
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-walking icon"></i>
+                    <h3>Farm Tours</h3>
+                    <p>Join us for a guided tour of our organic farm. Learn about our sustainable practices, see the crops growing, and meet our farmers.</p>
+                    <ul style="text-align: left; margin: 1rem 0; list-style: disc; padding-left: 2rem;">
+                        <li>90-minute guided tour</li>
+                        <li>Learn about organic farming</li>
+                        <li>See harvest techniques</li>
+                        <li>$15 per person</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="bookTour('farm-tour')">Book Tour</button>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-chalkboard-teacher icon"></i>
+                    <h3>Workshops</h3>
+                    <p>Hands-on workshops on composting, organic gardening, preserving produce, and more. Perfect for aspiring gardeners!</p>
+                    <ul style="text-align: left; margin: 1rem 0; list-style: disc; padding-left: 2rem;">
+                        <li>3-hour hands-on sessions</li>
+                        <li>Take-home materials included</li>
+                        <li>Small group sizes (max 12)</li>
+                        <li>$45 per person</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="bookTour('workshop')">Book Workshop</button>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-school icon"></i>
+                    <h3>School Visits</h3>
+                    <p>Educational field trips for students to learn about organic farming, sustainability, and where their food comes from.</p>
+                    <ul style="text-align: left; margin: 1rem 0; list-style: disc; padding-left: 2rem;">
+                        <li>Age-appropriate programs</li>
+                        <li>Curriculum-aligned content</li>
+                        <li>Group pricing available</li>
+                        <li>$10 per student</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="bookTour('school')">Book School Visit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--color-beige-primary);">
+        <div class="container">
+            <h2 class="section-title">Book Your Visit</h2>
+            <div style="max-width: 600px; margin: 0 auto; background-color: white; padding: 3rem; border-radius: 10px; box-shadow: var(--shadow-md);">
+                <form onsubmit="handleBooking(event)">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone *</label>
+                        <input type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Experience Type *</label>
+                        <select required>
+                            <option value="">Select an option</option>
+                            <option value="farm-tour">Farm Tour</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="school-visit">School Visit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date *</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Number of People *</label>
+                        <input type="number" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Special Requests</label>
+                        <textarea placeholder="Any dietary restrictions, accessibility needs, or special requests..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Photo & Video Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400&q=80" alt="Farm Tour">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400&q=80" alt="Workshop">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&q=80" alt="School Visit">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&q=80" alt="Farm Activities">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&q=80" alt="Harvesting">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400&q=80" alt="Farm Life">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Organic Farm</h3>
+                    <p>Experience organic farming firsthand.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> visits@organicfarm.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Organic Farm. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3 style="margin: 0; color: white;">Shopping Cart</h3>
+            <button class="close-cart" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
+
+    <script>
+        function bookTour(type) {
+            document.querySelector('select').value = type;
+            document.querySelector('select').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleBooking(event) {
+            event.preventDefault();
+            alert('Thank you for your booking request! We will contact you within 24 hours to confirm your visit.');
+            event.target.reset();
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
